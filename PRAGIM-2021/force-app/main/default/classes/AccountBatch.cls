@@ -7,6 +7,7 @@
  * Modifications Log 
  * Ver   Date         Author                      Modification
  * 1.0   02-20-2021   i.lakshmideepak@gmail.com   Initial Version
+ * 1.0   02-20-2021   i.lakshmideepak@gmail.com   Need to Inc,,ude Statefull so that I can hold the size of Data
 **/
  global class AccountBatch implements Database.Batchable<sObject> { 
    
