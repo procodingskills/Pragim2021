@@ -8,7 +8,7 @@
  * Ver   Date         Author                      Modification
  * 1.0   02-20-2021   i.lakshmideepak@gmail.com   Initial Version
 **/
- global class AccountBatch implements Database.Batchable<sObject> {
+ global class AccountBatch implements Database.Batchable<sObject> { 
    
       /*
         1) Need to implement Database.Batchable<sObject>
