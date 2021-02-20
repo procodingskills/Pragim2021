@@ -20,19 +20,24 @@
         4) Finish method will execute only once in every batch class --> Database.BatchableContext
       */
 
+      global void execute(Database.BatchableContext bc , List<Account> chunks){
+        // Descritption field with --> AccName - Type - Rating
+        for(Account record : chunks){
+                record.Description = record.Name +' - '+record.type + ' - '+record.rating;
+        }
+        update chunks;
+        system.debug('Execute Method Started');
+     }
+
       global Database.QueryLocator start(Database.BatchableContext bc){
         
           String query = 'SELECT ID , Name , Description , Type , Rating FROM Account';
+          system.debug('Start Method Executed');
+          system.debug('Start Method Executed');
         return Database.getQueryLocator(query);
       }
 
-      global void execute(Database.BatchableContext bc , List<Account> chunks){
-            // Descritption field with --> AccName - Type - Rating
-            for(Account record : chunks){
-                    record.Description = record.Name +' - '+record.type + ' - '+record.rating;
-            }
-            update chunks;
-      }
+     
 
       global void finish(Database.BatchableContext bc){
           AsyncApexJob data = [SELECT Id, CreatedDate, CreatedById, JobType, ApexClassId, Status, JobItemsProcessed, TotalJobItems, NumberOfErrors, CompletedDate, MethodName, ExtendedStatus, 
