@@ -21,7 +21,7 @@
       */
 
       global Database.QueryLocator start(Database.BatchableContext bc){
-          system.debug('Start Method Executed');
+        
           String query = 'SELECT ID , Name , Description , Type , Rating FROM Account';
         return Database.getQueryLocator(query);
       }
@@ -32,7 +32,6 @@
                     record.Description = record.Name +' - '+record.type + ' - '+record.rating;
             }
             update chunks;
-            system.debug('Execute Method Started');
       }
 
       global void finish(Database.BatchableContext bc){
@@ -70,7 +69,7 @@
             body +='<br/> Regards,<br/>I.Lakshmi Deepak';
             mail.setHtmlBody(body);
             Messaging.EmailFileAttachment attachment = new Messaging.EmailFileAttachment();
-            attachment.setFileName('AccountBatch Report on '+system.now()+'.csv');
+           
             attachment.setBody(Blob.valueOf(body));
             List<Messaging.EmailFileAttachment> attachments = new List<Messaging.EmailFileAttachment>();
             attachments.add(attachment);
