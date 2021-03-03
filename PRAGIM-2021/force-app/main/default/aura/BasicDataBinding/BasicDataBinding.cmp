@@ -2,13 +2,13 @@
 @description       : 
 @author            : i.lakshmideepak@gmail.com
 @group             : 
-@last modified on  : 03-02-2021
-@last modified by  : i.lakshmideepak@gmail.com
+@last modified on  : 03-03-2021
+@last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 Modifications Log 
 Ver   Date         Author                      Modification
 1.0   03-02-2021   i.lakshmideepak@gmail.com   Initial Version
 -->
-<aura:component implements="force:appHostable">
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
 
 <!-- Variables are called attributes in .cmp
         String , Integer , Object , Array , Boolean , Date , DateTime , Object[] , sobject , sbject[] , List, Cooleactions
@@ -18,6 +18,10 @@ Ver   Date         Author                      Modification
 <aura:attribute name="FirstName" type="String"  default="" description="This is the First Name of the Contact to look records" />
 <aura:attribute name="LastName" type="String" default="" description="This the last name of the contact to look records"/>
 <aura:attribute name="FullName" type="String" default=""/>
+
+<!-- Event Register start-->
+<aura:registerEvent name="appEvent" type="c:LtngTipsAndTricksAppEvent"/>
+<!-- Event register End-->
 <div class="slds-card">
         <!-- Header Search Layout for Fields START-->
         <lightning:layout multipleRows="true">
