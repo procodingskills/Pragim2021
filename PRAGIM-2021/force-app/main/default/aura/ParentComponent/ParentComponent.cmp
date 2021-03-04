@@ -2,7 +2,7 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 03-03-2021
+  @last modified on  : 03-04-2021
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
   Modifications Log 
   Ver   Date         Author                               Modification
@@ -15,6 +15,7 @@
     <aura:attribute name="lastNameP" type="String"/>
 <!-- Handle the Events Start-->
     <aura:handler event="c:LtngTipsAndTricksAppEvent" action="{!c.handleAppEvent}"/>
+    <aura:handler name="childToParent" event="c:LtngTipsAndTricksCmpEvent" action="{!c.handleCmpEvent}"/>
 <!-- Handle the Events End-->
     <lightning:card  title="{!v.parentTitle}">
 
@@ -25,7 +26,7 @@
         </aura:set>
 
         <p class="slds-p-horizontal_small">
-            <c:ChildComponent firstName="{!v.firstNameP}" lastName="{!v.lastNameP}"/>
+            <c:ChildComponent firstName="{!v.firstNameP}" lastName="{!v.lastNameP}" aura:id="childcmpauraId"/>
         </p>
     </lightning:card>
 </aura:component>
