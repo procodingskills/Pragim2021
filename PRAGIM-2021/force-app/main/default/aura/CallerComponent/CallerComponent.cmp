@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-07-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   03-07-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+   
+    <!-- Navigation service and Workservice-->
+    <lightning:navigation aura:id="navService"/>
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="fName" type="String" default=""/>
+
+    <div class="slds-card">
+        <lightning:input type="text" value="{!v.fName}" placeholder="Enter Component Name to display" aura:id="cmpname"/>
+        <lightning:button onclick="{!c.createComponentCtr}" label="Create" variant="brand"/>
+        <lightning:button onclick="{!c.deleteComponent}" label="Delete" variant="destructive"/>
+    </div>
+    <div class="slds-card">
+        {!v.body}
+    </div>
+</aura:component>	
