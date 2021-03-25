@@ -10,7 +10,7 @@
 **/
 public inherited sharing class AccountBatchSchedular implements Schedulable{
     public void execute(SchedulableContext sc){
-        AccountBatch batchJob = new AccountBatch();
+        AccountBatch batchJob = new AccountBatch(); 
         Database.executeBatch(batchJob , 2000);
     }
 }
