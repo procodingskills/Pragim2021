@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-28-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   03-28-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+    <lightning-card title="Wire a Property">
+       Wire a Property Output : {wirePropertyVariable.data}
+    </lightning-card>
+    <lightning-card title="Wire a Function">
+        Wire a Function Output : {wireFunctunctionData}<br/>
+       <span style="color:red;">{wireFunctionerror}</span> 
+     </lightning-card>
+     <lightning-card title="Wire Imperativel">
+        Wire a Function Output : {userData}<br/>
+       <lightning-button label="Call Apex on Click" onclick={handleUser}></lightning-button>
+     </lightning-card>
+</template>
