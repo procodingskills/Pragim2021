@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-27-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   03-27-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+    <lightning-card title="Create New Account Record">
+        <lightning-layout>
+            <!-- Input for Account Creation-->
+            <lightning-layout-item size="6">
+                <lightning-input label="Name" name="accountname" onchange={nameChangeHandler}></lightning-input>
+                <lightning-button onclick={createAccountAct} label="Ceate"></lightning-button>
+            </lightning-layout-item>
+
+            <!-- FOR OUT PUT OF MY ACCOUNT INFORMATION-->
+            <lightning-layout-item size="6">
+                Record Id : {accountRecordId}
+                <br></br>
+                Name : {queryName}
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-card>
+</template>
