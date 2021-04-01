@@ -1,5 +1,6 @@
 import { LightningElement , wire } from 'lwc';
 import getObjectApiName from '@salesforce/apex/sObjectService.getObjectApiName';
+import pubsub from 'c/pubsub';
 
 export default class CallApexComponent extends LightningElement {
 
@@ -40,5 +41,4 @@ export default class CallApexComponent extends LightningElement {
         alert("Conected callback calling from callApexComponent");
         this.handleUser(event);
     }
-
 }
