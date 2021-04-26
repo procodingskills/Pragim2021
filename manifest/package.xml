@@ -4,9 +4,17 @@
         <members>AccountTrigger</members>
         <name>ApexTrigger</name>
     </types>
-     <types>
-        <members>AccountTrigger</members>
-        <name>ApexTrigger</name>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
     </types>
     
     <version>51.0</version>
